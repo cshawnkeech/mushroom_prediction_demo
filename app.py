@@ -9,6 +9,22 @@ import pandas as pd
 
 from src.mushroom_model import predict_mushroom
 
+# # # Remove the deploy button and menu # # #
+
+st.set_page_config(page_title="Page Title", layout="wide")
+
+st.markdown("""
+    <style>
+        .reportview-container {
+            margin-top: -2em;
+        }
+        #MainMenu {visibility: hidden;}
+        .stDeployButton {display:none;}
+        footer {visibility: hidden;}
+        #stDecoration {display:none;}
+    </style>
+""", unsafe_allow_html=True)
+
 # # # Header # # #
 
 st.markdown("# Mushroom Classifier")
